@@ -21,6 +21,9 @@ class Post extends Model
         'body'
     ];
 
+    protected $with = ['author', 'kategori']; // fungsinya agar selalu menjalankan eager loading (default). Isinya adalah relasi di model tersebut
+
+
     public function author(): BelongsTo {
         return $this->belongsTo(User::class); // belongsTo sama artinya dengan hasOne
     }
