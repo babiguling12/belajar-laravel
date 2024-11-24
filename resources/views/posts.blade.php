@@ -17,7 +17,7 @@
                         <div class="flex justify-between items-center mb-5 text-gray-500">
                             <a href="/posts?kategori={{ $post->kategori->slug }}">
                                 <span
-                                    class="bg-{{ $post->kategori->color }}-100 text-{{ $post->kategori->color }}-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
+                                    class="bg-{{ $post->kategori->color }}-100 text-{{ $post->kategori->color }}-800 text-xs font-medium inline-flex items-center px-3 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
                                     <path
                                         d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z">
                                     </path>
