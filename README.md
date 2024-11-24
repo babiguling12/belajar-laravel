@@ -9,7 +9,7 @@
 
 ## About Gustos
 
-Gustos create this website since early November. Find out Gustos at Instagram [@sudarma.putraaa](instagram.com/sudarma.putraaa)
+Gustos create this website since early November. Find out Gustos at Instagram [@sudarma.putraaa](https://www.instagram.com/sudarma.putraaa/)
 
 ## About Laravel
 
