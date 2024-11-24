@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:title>{{ $title }}</x-slot:title>
-
+    
     <section class="bg-white dark:bg-gray-900">
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
@@ -9,12 +9,13 @@
                 <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">We use an agile approach to test
                     assumptions and connect with the needs of your audience early and often.</p>
             </div>
+            <x-searching-bar></x-searching-bar>
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                @foreach ($posts as $post)
+                @forelse ($posts as $post) <!-- forelse ini fungsinya untuk melakukan perulangan sama kayak foreach cuma langsung berisi kondisi if else nya -->
                     <article
                         class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex justify-between items-center mb-5 text-gray-500">
-                            <a href="/kategories/{{ $post->kategori->slug }}">
+                            <a href="/posts?kategori={{ $post->kategori->slug }}">
                                 <span
                                     class="bg-{{ $post->kategori->color }}-100 text-{{ $post->kategori->color }}-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
                                     <path
@@ -33,7 +34,7 @@
                         <p class="mb-5 font-light text-gray-500 dark:text-gray-400">{{ Str::limit($post->body, 150) }}
                         </p>
                         <div class="flex justify-between items-center">
-                            <a href="/authors/{{ $post->author->username }}">
+                            <a href="/posts?author={{ $post->author->username }}">
                                 <div class="flex items-center space-x-3">
                                     <img class="w-7 h-7 rounded-full"
                                         src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
@@ -55,7 +56,14 @@
                             </a>
                         </div>
                     </article>
-                @endforeach
+
+                @empty <!--empty sama kek else -->
+                <div>
+                    <p class="font-semibold text-xl my-4">Article not found!</p>
+                    <a href="/posts" class="block text-blue-600 hover:underline">&laquo; Back to All Posts</a>
+                </div>
+
+                @endforelse
             </div>
         </div>
     </section>
