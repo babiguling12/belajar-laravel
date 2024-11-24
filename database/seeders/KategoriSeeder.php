@@ -17,26 +17,36 @@ class KategoriSeeder extends Seeder
         Kategori::create([
             'name' => 'Web Programming',
             'slug' => 'web-programming',
+            'color' => 'red',
+            'icon' => '🤩'
         ]);
 
         Kategori::create([
             'name' => 'Pemrograman Berorientasi Objek',
             'slug' => 'pemrograman-berorientasi-objek',
+            'color' => 'green',
+            'icon' => '💀'
         ]);
 
         Kategori::create([
-            'name' => 'Analaisa PL',
+            'name' => 'Analisa PL',
             'slug' => 'analisa-pl',
+            'color' => 'blue',
+            'icon' => '🤮'
         ]);
 
         Kategori::create([
             'name' => 'Statistika Susah',
             'slug' => 'statistika-susah',
+            'color' => 'yellow',
+            'icon' => '🗿'
         ]);
 
         Kategori::create([
             'name' => 'Basis Data',
             'slug' => 'basis-data',
+            'color' => 'indigo',
+            'icon' => '🤯'
         ]);
     }
 }
